@@ -1,1 +1,62 @@
- 
+<html>
+<style>
+	body {
+		background: linear-gradient(to left, #ff9a9e 5.55%, #fecfef 93.18%);
+	}
+
+	.card {
+		position: absolute;
+		width: 457px;
+		height: 517px;
+		left: calc(50% - 457px/2);
+		top: calc(50% - 517px/2);
+	}
+
+	.card-row {
+		position: absolute;
+		width: 297px;
+		height: 60px;
+		left: calc(50% - 297px/2);
+		top: calc(50% - 60px/2 + 150px);
+	}
+
+	.red {
+		position: absolute;
+		width: 465.77px;
+		height: 370.25px;
+		left: -100px;
+		top: 200px;
+		transform: rotate(180deg);
+	}
+
+	.pink {
+		position: absolute;
+		width: 465.77px;
+		height: 370.25px;
+		right: -200px;
+		bottom: 0px;
+		transform: rotate(80deg);
+	}
+</style>
+<head>
+</head>
+<body onclick="popUp(false)">
+	<script>
+		function popUp(bool){
+			var popup = document.querySelector("popup");
+
+			if (bool){
+				//show popup
+			}
+			else
+			{
+				//remove popup
+			}
+		}
+	</script>
+	<img class="card" src="card.svg">
+	<img onclick="popUp(true)" class="card-row" src="row.svg">
+	<img class="pink" src="pink.svg">
+	<img class="red" src="red.svg">
+</body>
+</html>
