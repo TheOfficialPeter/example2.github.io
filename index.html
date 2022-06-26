@@ -24,39 +24,121 @@
 		position: absolute;
 		width: 465.77px;
 		height: 370.25px;
-		left: -100px;
+		left: 0px;
 		top: 200px;
 		transform: rotate(180deg);
+		z-index: -2;
 	}
 
 	.pink {
 		position: absolute;
 		width: 465.77px;
 		height: 370.25px;
-		right: -200px;
-		bottom: 0px;
-		transform: rotate(80deg);
+		right: 0px;
+		bottom: 10px;
+		transform: rotate(180deg);
+		z-index: -1;
+	}
+
+	.popup {
+		position: fixed;
+		width: 537px;
+		height: 0;
+		left: calc(50% - 537px/2);
+		top: calc(50% - 327px/2);
+		transition: all .2s;
+		z-index: 101;
+	}
+
+	.yes {
+		box-sizing: border-box;
+		position: absolute;
+		width: 141px;
+		height: 63px;
+		opacity: 0;
+		z-index: 102;
+		left: calc(50% - 141px/2 - 100px);
+		top: calc(50% - 63px/2 + 100px);
+	}
+
+	.no {
+		box-sizing: border-box;
+		position: absolute;
+		width: 141px;
+		height: 63px;
+		opacity: 0;
+		z-index: 102;
+		left: calc(50% - 141px/2 + 100px);
+		top: calc(50% - 63px/2 + 100px);
 	}
 </style>
 <head>
 </head>
-<body onclick="popUp(false)">
+<body id="body">
 	<script>
 		function popUp(bool){
-			var popup = document.querySelector("popup");
+			var popup = document.getElementById("popup");
+			var body = document.getElementById("body");
+			var shadow = document.createElement("div");
+			var popup = document.getElementById("popup");
+			var yes = document.createElement("img");
+			document.body.appendChild(yes);
+			yes.id = "yes";
+			yes.classList.add("yes");
+			yes.src = "YES.svg";
+			yes.onclick = function() {
+				popUp(false);
+			};
 
-			if (bool){
+			var no = document.createElement("img");
+			document.body.appendChild(no);
+			no.id = "no";
+			no.classList.add("no");
+			no.src = "NO.svg";
+			no.onclick = function() {
+				popUp(false);
+			};
+
+			shadow.id = "shadow";
+			body.appendChild(shadow);
+
+
+			if (bool == true){
 				//show popup
+				console.log("clicked");
+				shadow.style = "z-index: 100; background-color: black; opacity: 75%; position: fixed; top: 0; left: 0; right: 0; bottom: 0;";
+				popup.style.height = "327px";
+				setTimeout(function(){
+					yes.style.opacity = "100%";
+					no.style.opacity = "100%";
+				}, 200)
 			}
 			else
 			{
 				//remove popup
+				var shadow = document.getElementById('shadow');
+				var yes = document.getElementById('yes');
+				var no = document.getElementById('no');
+				no.remove();
+				yes.remove();
+				shadow.remove();
+
+				var shadow = document.getElementById('shadow');
+				var yes = document.getElementById('yes');
+				var no = document.getElementById('no');
+				no.remove();
+				yes.remove();
+				shadow.remove();
+
+				popup.style.height = "0";
 			}
 		}
+
 	</script>
 	<img class="card" src="card.svg">
 	<img onclick="popUp(true)" class="card-row" src="row.svg">
 	<img class="pink" src="pink.svg">
 	<img class="red" src="red.svg">
+	<img class="popup" id="popup" src="popup.svg">
 </body>
 </html>

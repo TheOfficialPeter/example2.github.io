@@ -1,10 +1,12 @@
-<svg width="297" height="60" viewBox="0 0 297 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<ellipse cx="30.5" cy="30" rx="30.5" ry="30" fill="white"/>
-<rect x="8" y="7" width="45" height="45" fill="url(#pattern0)"/>
-<ellipse cx="148.5" cy="30" rx="30.5" ry="30" fill="white"/>
-<rect x="126" y="7" width="45" height="45" fill="url(#pattern1)"/>
-<ellipse cx="266.5" cy="30" rx="30.5" ry="30" fill="white"/>
-<rect x="245" y="8" width="44" height="44" fill="url(#pattern2)"/>
+<svg width="297" height="62" viewBox="0 0 297 62" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<ellipse cx="30.5" cy="31" rx="30.5" ry="30" fill="white"/>
+<rect x="8" y="8" width="45" height="45" fill="url(#pattern0)"/>
+<ellipse cx="148.5" cy="31" rx="30.5" ry="30" fill="white"/>
+<rect x="126" y="8" width="45" height="45" fill="url(#pattern1)"/>
+<ellipse cx="266.5" cy="31" rx="30.5" ry="30" fill="white"/>
+<rect x="245" y="9" width="44" height="44" fill="url(#pattern2)"/>
+<line x1="90.5" y1="2.5" x2="90.5" y2="58.5" stroke="white" stroke-opacity="0.5" stroke-width="5" stroke-linecap="round"/>
+<line x1="210.5" y1="3.5" x2="210.5" y2="59.5" stroke="white" stroke-opacity="0.5" stroke-width="5" stroke-linecap="round"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_3_24" transform="scale(0.0111111)"/>
