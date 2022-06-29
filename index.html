@@ -2,22 +2,30 @@
 <style>
 	body {
 		background: linear-gradient(to left, #ff9a9e 5.55%, #fecfef 93.18%);
+		zoom: 70%;
 	}
 
 	.card {
+		background-color: rgba(255,255,255,.25);
+		box-shadow: 10px 10px 20px rgba(100,100,100,.2);
+		border-radius: 20px;
 		position: absolute;
-		width: 457px;
-		height: 517px;
-		left: calc(50% - 457px/2);
-		top: calc(50% - 517px/2);
+		height: 600px;
+		left: 30%;
+		right: 30%;
+		top: calc(50% - 600px/2);
 	}
 
 	.card-row {
 		position: absolute;
 		width: 297px;
-		height: 60px;
 		left: calc(50% - 297px/2);
-		top: calc(50% - 60px/2 + 150px);
+		bottom: 50px;
+	}
+
+	.card-row-item-border {
+		padding-right: 5px;
+		border-right: 2px solid rgba(255,255,255,.5);
 	}
 
 	.red {
@@ -38,6 +46,41 @@
 		bottom: 10px;
 		transform: rotate(180deg);
 		z-index: -1;
+	}
+	
+	.picture {
+		border-radius: 50%;
+		border: 10px solid white;
+		box-shadow: 4px 4px 30px rgba(100,100,100,.2);
+		position: absolute;
+		height: 120px;
+		width: 120px;
+		left: calc(50% - 120px/2);
+		top: 20px;
+	}
+
+	.title {
+		position: absolute;
+		width: 150px;
+		left: calc(50% - 150px/2); 
+		top: 175px;
+		font-size: 80px;
+		color: rgba(255,32,32,.5);
+		font-family: Arial;
+		font-weight: 1000;
+		text-shadow: 0 0 50px rgba(255,32,32,.8);
+	}
+
+	.about {
+		position: absolute;
+		left: 20%;
+		right: 20%;
+		top: 300px;
+		text-align: center;
+		font-size: 25px;
+		color: white;
+		font-weight: 100;
+		font-family: Arial;
 	}
 
 	.popup {
@@ -135,8 +178,12 @@
 		}
 
 	</script>
-	<img class="card" src="card.svg">
-	<img onclick="popUp(true)" class="card-row" src="row.svg">
+	<div class="card">
+		<img class="picture" src="logo.png">
+		<div class="title">Ava.</div>
+		<img onclick="popUp(true)" class="card-row" src="row.svg">
+		<div class="about">Taking graphic design to its limits</div>
+	</div>
 	<img class="pink" src="pink.svg">
 	<img class="red" src="red.svg">
 	<img class="popup" id="popup" src="popup.svg">
